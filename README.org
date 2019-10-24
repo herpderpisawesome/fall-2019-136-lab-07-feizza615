@@ -1,11 +1,11 @@
 * Fall 2019 - Lab 06
 
-* Last name:
+* Last name: Fazilatun
 
-* First name:
+* First name: Feizza
 
 
-* GitHub username:
+* GitHub username: feizza615
 
 * Notes:
 
@@ -14,16 +14,16 @@
 - Fill in your name and GitHub username on top.
 - Use the Notes section to add any notes to the instructor.
 - The main lab description can be found here:
-  https://maryash.github.io/135/labs/lab_07.html 
+  https://maryash.github.io/135/labs/lab_07.html
 - *DO NOT SUBMIT to Gradescope.*
 
 * Daedalus specific instructions (changes from main spec):
 
 This lab is starting with a mostly empty repository (only doctest. is
-present). 
+present).
 
 You will have to create the *Makefile* and decide on what *.cpp* and
-*.h* files you will need. 
+*.h* files you will need.
 
 You will need at least two targets in your *Makefile* - *main* which
 will build the main program and *tests* which will build the
@@ -39,4 +39,3 @@ be automated (you can require user input when the *main* target is run.
 
 Also remember you can embed "\n" in a string for a newline and "\t" for a
 tab and that you can compare strings to see if they are the same.
-
