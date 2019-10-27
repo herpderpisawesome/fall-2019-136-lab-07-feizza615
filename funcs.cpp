@@ -7,12 +7,12 @@
 #include <sstream>
 
 std::string removeLeadingSpaces(std::string line);
-//int countChar(std::string line, char c);
 std::string indent(std::string line);
 std::string stringCreator(std::string c, int times);
 bool checkChar(std::string str, char c);
 
 //Leading Function
+
 std::string fileReader(std::string fileName){
   std::string output="";
   std::string line="";
@@ -22,7 +22,7 @@ std::string fileReader(std::string fileName){
     output+=removeLeadingSpaces(line)+"\n";
   }
 
-  return indent(output);
+  return indent(output);;
 }
 
 //Task A
@@ -35,32 +35,23 @@ std::string removeLeadingSpaces(std::string line){
   return "";
 }
 
-//Task B
-/*int countChar(std::string line, std::string c){
-  int counter=0;
-  for(int i = 0; i< line.length(); i++){
-    if(line[i]==c){
-      counter++;
-    }
-  }
-  return counter;
-}*/
 
 std::string indent(std::string unindented){
-  std::cout<<unindented;
   std::istringstream f(unindented);
   std::string line;
   std::string indented;
-  int counter;
+  int counter=0;
   while(std::getline(f,line)){
-    indented+=stringCreator("\t",counter)+line+"\n";
     if(checkChar(line,'{')){
-    //  std::cout<<counter;
+      indented+=stringCreator("\t",counter)+line+"\n";
       counter++;
     }
     else if (checkChar(line,'}')){
-      //std::cout<<counter;
       counter--;
+      indented+=stringCreator("\t",counter)+line+"\n";
+    }
+    else{
+      indented+=stringCreator("\t",counter)+line+"\n";
     }
   }
   return indented;
