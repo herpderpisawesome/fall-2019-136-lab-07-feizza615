@@ -9,6 +9,19 @@
 #include <climits>
 
 int main(){
-  std::cout<<removeLeadingSpaces("       int x = 1;  ")+"\n";
-  std::cout<<fileReader("bad-code.cpp");
+
+  std::string fileName;
+  std::string line="";
+  std::cout<<"Enter cpp file name (bad-code.cpp): ";
+
+  std::cin>>fileName;
+  std::ifstream fin(fileName);
+
+  std::cout<<"BADLY INDENTED PIECE OF CODE"<<"\n";
+  while(getline(fin,line)){
+    std::cout<<line<<"\n";
+  }
+
+  std::cout<<"PROPERLY INDENTED PIECE OF CODE"<<"\n"<<fileReader(fileName)<<"\n";
+
 }
