@@ -22,7 +22,7 @@ std::string fileReader(std::string fileName){
     output+=removeLeadingSpaces(line)+"\n";
   }
 
-  return indent(output);;
+  return indent(output);
 }
 
 //Task A
@@ -58,7 +58,21 @@ std::string indent(std::string unindented){
 }
 
 bool checkChar(std::string str, char c){
+std::string x{""};
   for(int i =0; i<str.length(); i++){
+    if(str[i]==char(34)){
+      for(int j=i+1; j<str.length();j++){
+        if(str[j]==char(34)){
+          x=str.substr(i,j-i);
+          for(int z=0; z<x.length();z++){
+            if(x[z]==c){
+              return false;
+            }
+          }
+        }
+      }
+      
+    }
     if(str[i]==c){
       return true;
     }
