@@ -22,7 +22,7 @@ std::string fileReader(std::string fileName){
     output+=removeLeadingSpaces(line)+"\n";
   }
 
-  return indent(output);;
+  return indent(output);
 }
 
 //Task A
